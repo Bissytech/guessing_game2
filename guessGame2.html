@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.theDiv{
+    background-color: aqua;
+    width: 50vw;
+    height: 20vh;
+    margin: auto;
+    padding: 50px;
+}
+button{
+    height: 30px;
+    width: 30px;
+}
+</style>
+<body>
+    <div class="theDiv">
+    <h1>THE GUESSING GAME</h1>
+   <button value="1" onclick="myButton(event)">1</button> 
+   <button value="2" onclick="myButton(event)">2</button>
+   <button value="3" onclick="myButton(event)">3</button>
+   <button value="4" onclick="myButton(event)">4</button>
+   <button value="5" onclick="myButton(event)">5</button>
+   <button value="6" onclick="myButton(event)">6</button>
+   <button value="7" onclick="myButton(event)">7</button>
+   <button value="8" onclick="myButton(event)">8</button>
+   <button value="9" onclick="myButton(event)">9</button>
+   <button value="0" onclick="myButton(event)">0</button>
+   <h2 id="theHead"> </h2>
+</div>
+
+    
+</body>
+</html>
+<script>
+    let theHead = document.getElementById('theHead')
+
+function myButton(r){
+    let theGuessNum = Math.floor(Math.random()* 10)
+theHead.innerHTML = theGuessNum
+if (theGuessNum == r.target.value) {
+    alert('you are correct');
+} else {
+    alert('you are wrong, try again');
+}
+}
+
+</script>
